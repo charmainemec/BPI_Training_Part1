@@ -1,4 +1,8 @@
 use database training_db;
+
+DELETE TABLE students;
+DELETE TABLE courses;
+
 CREATE TABLE students (
 	id SERIAL PRIMARY KEY NOT NULL,
 	name VARCHAR(50) NOT NULL,
@@ -7,11 +11,10 @@ CREATE TABLE students (
 );
 
 CREATE TABLE courses (
-   id SERIAL NOT NULL,
+   id SERIAL PRIMARY KEY NOT NULL,
    student_id INT,
    course_name VARCHAR(50),
    grade VARCHAR(2),
-   PRIMARY KEY (id),
    FOREIGN KEY (student_id) REFERENCES students(id)
 );
 
