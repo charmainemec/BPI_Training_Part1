@@ -1,0 +1,21 @@
+meta {
+  name: Get Movie
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:1983/bookshop/movies/all
+  body: none
+  auth: basic
+}
+
+auth:basic {
+  username: user
+  password: 85b5a7ec-7dff-4231-bab8-a15273c2c9f3
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

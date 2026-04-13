@@ -1,0 +1,24 @@
+meta {
+  name: Post Movie
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:1983/bookshop/movies
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "title": "Serendipity2",
+    "director": "Peter Chelsom",
+    "mdate": "04/07/2026"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
